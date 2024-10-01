@@ -1,5 +1,3 @@
-package com.example.project;
-
 public class Student{
 
  /* Instance Variables */
@@ -21,7 +19,7 @@ public class Student{
 public Student(String firstName, String lastName, int gradYear) {
     //implement code here!
     this.firstName = firstName;
-    this.lastName = lastName;
+    this.lastname = lastName;
     this.gradYear = gradYear;
 }
 
@@ -62,7 +60,7 @@ public void setGradYear(int newGradYear) {
 // and increments testScoreCount by 1
 // set new highest test score 
 public void addTestScore(double newTestScore) {
-    scoreCount ++;
+    testScoreCount ++;
     sum += newTestScore;
     if (newTestScore > highestScore) {
         highestScore = newTestScore;
@@ -72,9 +70,9 @@ public void addTestScore(double newTestScore) {
 // returns true if the student's average test score is greater
 // than or equal to 65; returns false otherwise (see Note 2 below)
 public boolean isPassing() {
-    if(averageTestScore() >= 65){
+    if(averageTestScore>=65){
         return true;
-    } else {
+    } else{
         return false; 
     }
     
@@ -83,7 +81,7 @@ public boolean isPassing() {
 // returns the Student's average test score as the
 // quotient of accumulatedTestScores and testScoreCount
 public double averageTestScore() {
-    double average = sum/scoreCount;
+    double average = sum/testScoreCount;
     return average;
 }
 
@@ -98,3 +96,4 @@ public void printStudentInfo() {
     System.out.println("Is passing: " + isPassing());
 }
 }
+
